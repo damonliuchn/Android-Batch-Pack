@@ -42,7 +42,7 @@ call myjava.bat AntPackage.java %~dp0project\xx %a%  把xx改成你的文件夹�
 ------
 ##欢迎批评指正
 
-博客：http://blog.csdn.net/tomblog
+博客：http://blog.csdn.net/masonblog
 邮箱：MasonLiuChn@gmail.com
 
 
