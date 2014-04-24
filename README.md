@@ -2,7 +2,11 @@
 
 ------
 
-## 什么是 Android-Batch-Pack
+## 此项目不再维护，原因是本人放弃使用Ant了，转投Gradle，因为Gradle 又简单又方便，Gradle的配置文件具体如下：
+
+https://github.com/umeng/umeng-muti-channel-build-tool/tree/master/Gradle
+
+## 下面是本项目 Android-Batch-Pack 的介绍和使用说明
 
 Android-Batch-Pack 是实现批量打包apk的工具，适用于包含了第三方library project的project，并且不影响project的代码混淆，每次打包自动修改用于统计的渠道标签（如友盟统计的channel tag）。目前只是用于windows平台。
 
