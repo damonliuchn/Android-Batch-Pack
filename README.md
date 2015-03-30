@@ -1,25 +1,29 @@
 # Android-Batch-Pack
 
-------
+1、ant
 
-## 此项目不再维护，原因是本人放弃使用Ant了，转投Gradle，因为Gradle 又简单又方便，Gradle的配置文件具体如下：
+2、gradle
+gradle配置文件：https://github.com/umeng/umeng-muti-channel-build-tool/tree/master/Gradle
 
-https://github.com/umeng/umeng-muti-channel-build-tool/tree/master/Gradle
+3、META-INF写入文件（推荐这种方法）
+https://github.com/MasonLiuChn/BatchPackApk
 
-## 下面是本项目 Android-Batch-Pack 的介绍和使用说明
+本项目是方法1用ant实现的打包，推荐使用方法3，方法3无需签名，不用编译源码，速度快。
+
+# Android-Batch-Pack 的介绍和使用说明
 
 Android-Batch-Pack 是实现批量打包apk的工具，适用于包含了第三方library project的project，并且不影响project的代码混淆，每次打包自动修改用于统计的渠道标签（如友盟统计的channel tag）。目前只是用于windows平台。
 
 
 ------
 
-##作者：Mason Liu           天盟
+#作者：Mason Liu           天盟
 
-##安卓批量打包工具用法：
+#安卓批量打包工具用法：
 
-###1、安装jdk、ant，配置环境变量
+#1、安装jdk、ant，配置环境变量
 
-###2、在项目中生成build.xml
+#2、在项目中生成build.xml
 
 * 1、进入命令行模式，并切换到项目目录，执行如下命令为ADT创建的项目添加ant build支持：（library project中也需要生产）
 android update project -p . -t  "android-17"
@@ -30,21 +34,21 @@ key.alias=xxx
 key.store.password=xxx
 key.alias.password=xxx
 
-###3、修改项目的AndroidManifest.xml
+#3、修改项目的AndroidManifest.xml
 &lt;!--ant-package-tag-start-umeng-->&lt;meta-data android:value="xiaomi" android:name="UMENG_CHANNEL"/>&lt;!--ant-package-tag-end-umeng--> 
 目的是让工具识别到你的友盟标签
 
-###4、将您的项目包括library project 都拷贝到 ant-package\project 下（自己建一个project文件夹）
+#4、将您的项目包括library project 都拷贝到 ant-package\project 下（自己建一个project文件夹）
 
-###5、设置start.bat 里面的 渠道名 和 您的project文件夹名
+#5、设置start.bat 里面的 渠道名 和 您的project文件夹名
 
 set a=jifengwang_market_anzhiwang  这里的渠道名用下划线分割
 
 call myjava.bat AntPackage.java %~dp0project\xx %a%  把xx改成你的文件夹名
 
-###6、运行start.bat
+#6、运行start.bat
 ------
-##欢迎批评指正
+#欢迎批评指正
 
 博客：http://blog.csdn.net/masonblog
 邮箱：MasonLiuChn@gmail.com
