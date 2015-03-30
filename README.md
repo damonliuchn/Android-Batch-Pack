@@ -1,5 +1,7 @@
 # Android-Batch-Pack
 
+目前我知道的批量打包渠道包的方法有三种：
+
 1、ant
 
 2、gradle
